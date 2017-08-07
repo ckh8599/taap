@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="ios-apps-outline"></ion-icon>
+    </button>
+    <div style="width:100%; margin-left:80%;">
+      <button ion-button (click)="showCode()">
+        <ion-icon name="md-barcode"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <button ion-button full (click)="openURL()">Open Button</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
