@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PopoverController } from 'ionic-angular';
+// import { PopoverController } from 'ionic-angular';
+import { ModalController, NavParams } from 'ionic-angular';
 import { CodePage } from '../code/code';
 
 @Component({
@@ -9,12 +10,10 @@ import { CodePage } from '../code/code';
 })
 export class HomePage {
 
-  constructor(public popoverCtrl: PopoverController) {}
+  constructor(public modalCtrl: ModalController) {}
 
-  showCode(myEvent) {
-    let popover = this.popoverCtrl.create(CodePage);
-    popover.present({
-      ev: myEvent
-    });
+  showCode() {
+    let profileModal = this.modalCtrl.create(CodePage);
+    profileModal.present();
   }
 }

@@ -9,8 +9,7 @@ import { ViewController } from 'ionic-angular';
 export class CodePage {
     constructor(public viewCtrl: ViewController) {}
     
-    // close() {
-    //   this.viewCtrl.dismiss();
-    // }
-
+    close() {
+      this.viewCtrl.dismiss();
+    }
 }
