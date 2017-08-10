@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="ios-apps-outline"></ion-icon>
+    </button>
+    <div style="width:100%; margin-left:80%;">
+      <button ion-button (click)="showCode()">
+        <ion-icon name="md-barcode"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      설정
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-item>
+        <ion-label>푸시 알림 받음</ion-label>
+        <ion-checkbox [(ngModel)]="pushYN" (ionChange)="changePush()"></ion-checkbox>
+      </ion-item>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>푸시알림이 발송되었습니다. 흐흐흐 <ion-badge item-end>new</ion-badge></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>푸시알림이 발송되었습니다. 흐흐흐 하하하</ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <button ion-button block>푸시 알림 발송</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

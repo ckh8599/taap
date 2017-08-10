@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { WebViewPage } from '../pages/webview/webview';
+import { ConfigPage } from '../pages/config/config';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,7 @@ export class MyApp {
       { title: '공지사항', component: ListPage },
       { title: '유람선 예약', component: WebViewPage },
       { title: '개인정보 처리방침', component: ListPage },
-      { title: '푸시설정', component: ListPage }
+      { title: '푸시설정', component: ConfigPage }
     ];
 
   }

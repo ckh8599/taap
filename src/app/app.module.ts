@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CodePage } from '../pages/code/code';
 import { WebViewPage } from '../pages/webview/webview';
+import { ConfigPage } from '../pages/config/config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { InAppBrowser} from '@ionic-native/in-app-browser'
     HomePage,
     ListPage,
     CodePage,
-    WebViewPage
+    WebViewPage,
+    ConfigPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { InAppBrowser} from '@ionic-native/in-app-browser'
     HomePage,
     ListPage,
     CodePage,
-    WebViewPage
+    WebViewPage,
+    ConfigPage
   ],
   providers: [
     StatusBar,
