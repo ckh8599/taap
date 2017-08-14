@@ -13,6 +13,12 @@ export class ConfigPage {
     constructor(private toastCtrl: ToastController) {
 
     }
+
+    public msgList: any[] = [
+      {id:1, "msg":"푸시알림이 발송되었습니다. 흐흐흐 "},
+      {id:2, "msg":"푸시알림이 발송되었습니다. 헤헤헤 "},
+      {id:3, "msg":"푸시알림이 발송되었습니다. 히히히 "}
+    ];
     
     changePush() {
       console.log('changePush state is :' + this.pushYN);
@@ -21,24 +27,18 @@ export class ConfigPage {
 
     sendPush() {
 
-      console.log('sendPush is pushed');
+      if(this.pushYN){
+          let toast = this.toastCtrl.create({
+          message: '푸시알림이 하나더 발송되었습니다. 훃훃훃',
+          duration: 3000,
+          position: 'bottom'
+        });
 
-      let toast = this.toastCtrl.create({
-        message: 'User was added successfully',
-        duration: 3000,
-        position: 'bottom'
-      });
+        toast.onDidDismiss(() => {
+          console.log('Dismissed toast');
+        });
 
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-
-      toast.present();
+        toast.present();
+      }
     }
-
-    public msgList: any[] = [
-      {id:1, "msg":"푸시알림이 발송되었습니다. 흐흐흐 "},
-      {id:2, "msg":"푸시알림이 발송되었습니다. 헤헤헤 "},
-      {id:3, "msg":"푸시알림이 발송되었습니다. 히히히 "}
-    ];
 }
