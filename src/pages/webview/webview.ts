@@ -14,6 +14,6 @@ export class WebViewPage {
 
     openURL(){
         const browser = this.iab.create('https://www.caap.co.kr/userReserveShipB.do?companyCd=CA000129', '_self', 'toolbar=yes' );
-        browser.close();
+        // browser.close();
     }
 }

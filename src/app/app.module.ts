@@ -12,7 +12,8 @@ import { ConfigPage } from '../pages/config/config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { InAppBrowser} from '@ionic-native/in-app-browser'
+import { InAppBrowser} from '@ionic-native/in-app-browser';
+import { Deploy } from '@ionic/cloud-angular';
 
 @NgModule({
   declarations: [
@@ -43,4 +44,6 @@ import { InAppBrowser} from '@ionic-native/in-app-browser'
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(public deploy: Deploy) {}
+}

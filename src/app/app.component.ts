@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Deploy } from '@ionic/cloud-angular';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -26,7 +27,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: '공지사항', component: ListPage },
       { title: '유람선 예약', component: WebViewPage },
-      { title: '개인정보 처리방침', component: ListPage },
+      // { title: '개인정보 처리방침', component: ListPage },
       { title: '푸시설정', component: ConfigPage }
     ];
 
