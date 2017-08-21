@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { AlertController, Nav, Platform, IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 
 import { MyApp } from './app.component';
@@ -13,7 +13,8 @@ import { ConfigPage } from '../pages/config/config';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { InAppBrowser} from '@ionic-native/in-app-browser';
-import { Deploy } from '@ionic/cloud-angular';
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
+// import { Deploy } from '@ionic/cloud-angular';
 
 @NgModule({
   declarations: [
@@ -45,5 +46,5 @@ import { Deploy } from '@ionic/cloud-angular';
   ]
 })
 export class AppModule {
-  constructor(public deploy: Deploy) {}
+  // constructor(public deploy: Deploy) {}
 }
