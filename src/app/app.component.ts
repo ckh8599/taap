@@ -20,9 +20,9 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public push: Push, public alertCtrl: AlertController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public alertCtrl: AlertController, public push: Push) {
     this.initializeApp();
-    this.initPushNotification();
+    this.initPushNotification(push);
 
     // used for an example of ngFor and navigation
     this.pages = [
@@ -54,7 +54,7 @@ export class MyApp {
 
 
 
-  initPushNotification() {
+  initPushNotification(push) {
     if (!this.platform.is('cordova')) {
       console.warn('Push notifications not initialized. Cordova is not available - Run in physical device');
       return;
@@ -107,4 +107,5 @@ export class MyApp {
 
     pushObject.on('error').subscribe(error => console.error('Error with Push plugin' + error));
   }
+
 }

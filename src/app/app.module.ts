@@ -42,7 +42,8 @@ import { Push, PushObject, PushOptions } from '@ionic-native/push';
     StatusBar,
     SplashScreen,
     InAppBrowser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Push
   ]
 })
 export class AppModule {
