@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, SafeResourceUrl, DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { AlertController, Nav, Platform, IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
