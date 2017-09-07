@@ -8,12 +8,11 @@ import { BrowserModule, SafeResourceUrl, DomSanitizer, SafeUrl } from '@angular/
 @Component({
   selector: 'webview-home',
   templateUrl: 'webview.html'
-//   templateUrl: '<iframe [src]="iframe"></iframe>'
 })
 export class WebViewPage {
 
-    // iframe;
+    public url: SafeResourceUrl;
     constructor(private sanitizer: DomSanitizer) {
-        // this.iframe = sanitizer.bypassSecurityTrustResourceUrl("https://www.caap.co.kr/userReserveShipB.do?companyCd=CA000129")
+        this.url = sanitizer.bypassSecurityTrustResourceUrl("https://www.caap.co.kr/userReserveShipB.do?companyCd=CA000129")
     }
 }

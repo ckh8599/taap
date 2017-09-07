@@ -1,6 +1,7 @@
 import { BrowserModule, SafeResourceUrl, DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { AlertController, Nav, Platform, IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 import { MyApp } from './app.component';
@@ -28,6 +29,7 @@ import { Push, PushObject, PushOptions } from '@ionic-native/push';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

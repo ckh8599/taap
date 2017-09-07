@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'page-config',
@@ -10,10 +12,10 @@ import { ToastController } from 'ionic-angular';
 export class ConfigPage {
     pushYN: boolean;
 
-    constructor(private toastCtrl: ToastController) {
+    constructor(private toastCtrl: ToastController, private storage: Storage) {
 
     }
-
+    
     public msgList: any[] = [
       {id:1, "msg":"푸시알림이 발송되었습니다. 흐흐흐 "},
       {id:2, "msg":"푸시알림이 발송되었습니다. 헤헤헤 "},
