@@ -11,33 +11,38 @@ import { Storage } from '@ionic/storage';
 })
 export class ConfigPage {
     pushYN: boolean;
-
+    public msgList: any[] = [];
     constructor(private toastCtrl: ToastController, private storage: Storage) {
-
+      this.storage.forEach(element => {
+        this.msgList.push({id:1, "msg":element});
+      });
     }
     
-    public msgList: any[] = [
+    msgList_ = [
       {id:1, "msg":"푸시알림이 발송되었습니다. 흐흐흐 "},
       {id:2, "msg":"푸시알림이 발송되었습니다. 헤헤헤 "},
       {id:3, "msg":"푸시알림이 발송되었습니다. 히히히 "}
     ];
-    
+
     changePush() {
       console.log('changePush state is :' + this.pushYN);
       
     }
 
     sendPush() {
+      let pushMsg : string = '푸시알림이 하나더 발송되었습니다. 훃훃훃';
 
       if(this.pushYN){
           let toast = this.toastCtrl.create({
-          message: '푸시알림이 하나더 발송되었습니다. 훃훃훃',
+          message: pushMsg,
           duration: 3000,
           position: 'bottom'
         });
 
         toast.onDidDismiss(() => {
-          console.log('Dismissed toast');
+          this.storage.set('1', pushMsg);
+          // console.log('Dismissed toast');
+          this.msgList.push({id:4, "msg":pushMsg})
         });
 
         toast.present();

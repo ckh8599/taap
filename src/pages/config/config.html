@@ -26,10 +26,13 @@
       <ion-grid>
         <ion-row>
           <ion-col col-12 *ngFor="let list of msgList">{{list.msg}}<ion-badge *ngIf="list.id==1" item-end>new</ion-badge></ion-col>
-          <!--<ion-col col-12 *ngFor="let list of msgList">{{list.msg}}<ion-badge item-end>new</ion-badge></ion-col>-->
         </ion-row>
       </ion-grid>
 
+      <ion-item>
+        <ion-label floating>발송메세지 쓰기</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
       <button ion-button block (click)="sendPush()">푸시 알림 발송</button>
     </ion-card-content>
   </ion-card>
