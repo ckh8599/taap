@@ -29,8 +29,7 @@ export class ConfigPage {
       
     }
 
-    sendPush() {
-      let pushMsg : string = '푸시알림이 하나더 발송되었습니다. 훃훃훃';
+    sendPush(pushMsg) {
 
       if(this.pushYN){
           let toast = this.toastCtrl.create({
