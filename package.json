@@ -20,6 +20,7 @@
     "@angular/http": "4.1.3",
     "@angular/platform-browser": "^4.1.3",
     "@angular/platform-browser-dynamic": "4.1.3",
+    "@ionic-native/brightness": "^4.2.1",
     "@ionic-native/core": "3.12.1",
     "@ionic-native/in-app-browser": "^4.1.0",
     "@ionic-native/push": "^4.1.0",
@@ -28,6 +29,7 @@
     "@ionic/cloud-angular": "^0.12.0",
     "@ionic/storage": "^2.0.1",
     "cordova-ios": "^4.4.0",
+    "cordova-plugin-brightness": "^0.1.5",
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-inappbrowser": "^1.7.1",
@@ -65,7 +67,8 @@
         "SENDER_ID": "939103577353"
       },
       "ionic-plugin-deploy": {},
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-brightness": {}
     },
     "platforms": [
       "ios"

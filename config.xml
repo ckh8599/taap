@@ -90,4 +90,5 @@
         <variable name="SENDER_ID" value="939103577353" />
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.0.4" />
+    <plugin name="cordova-plugin-brightness" spec="^0.1.5" />
 </widget>

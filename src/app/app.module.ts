@@ -15,6 +15,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { InAppBrowser} from '@ionic-native/in-app-browser';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
+import { TodoService } from '../pages/service/todo.service';
+import { Brightness } from '@ionic-native/brightness';
 // import { Deploy } from '@ionic/cloud-angular';
 
 @NgModule({
@@ -45,7 +47,9 @@ import { Push, PushObject, PushOptions } from '@ionic-native/push';
     SplashScreen,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Push
+    Push,
+    TodoService,
+    Brightness
   ]
 })
 export class AppModule {

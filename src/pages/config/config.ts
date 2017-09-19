@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-
+import {TodoService} from '../service/todo.service';
 
 @Component({
   selector: 'page-config',
@@ -12,9 +12,13 @@ import { Storage } from '@ionic/storage';
 export class ConfigPage {
     pushYN: boolean;
     public msgList: any[] = [];
-    constructor(private toastCtrl: ToastController, private storage: Storage) {
-      this.storage.forEach(element => {
-        this.msgList.push({id:1, "msg":element});
+    constructor(private toastCtrl: ToastController, private storage: Storage, private todoService:TodoService) {
+      this.storage.forEach((value, key, index) => {
+        console.log('value.id is :' + value.id);
+        console.log('value.msg is :' + value.msg);
+        console.log('key is :' + key);
+        console.log('index is :' + index);
+        // this.msgList.push({id:1, "msg":element});
       });
     }
     
@@ -39,9 +43,8 @@ export class ConfigPage {
         });
 
         toast.onDidDismiss(() => {
-          this.storage.set('1', pushMsg);
-          // console.log('Dismissed toast');
-          this.msgList.push({id:4, "msg":pushMsg})
+          this.msgList.push({id:1, "msg":pushMsg});
+          this.storage.set('PUSH_LIST', {id:1, "msg":pushMsg});
         });
 
         toast.present();
