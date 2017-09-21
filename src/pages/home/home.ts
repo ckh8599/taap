@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-// import { PopoverController } from 'ionic-angular';
 import { ModalController, NavParams } from 'ionic-angular';
 import { CodePage } from '../code/code';
 
